@@ -4,10 +4,12 @@
 }
 
 input,
-select {
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
-  padding: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid black;
 }
 
 button[type="submit"] {
@@ -18,8 +20,11 @@ button[type="submit"] {
   margin: 0.5rem 0;
   background-color: black;
   color: white;
+  margin-top: 1rem;
 }
 
 .form-container form {
   display: grid;
+  width: 600px;
+  /* background-color: aquamarine; */
 }

@@ -19,9 +19,18 @@ class App extends Component {
   };
 
   submitForm = (e) => {
-    console.log("hei");
     e.preventDefault();
     this.setState({ showPopup: true });
+    e.target.reset();
+  };
+
+  closePopup = () => {
+    this.setState({ showPopup: false });
+    this.setState({ firstname: "" });
+    this.setState({ lastname: "" });
+    this.setState({ phone: "" });
+    this.setState({ role: "" });
+    this.setState({ message: "" });
   };
 
   render() {
@@ -40,7 +49,16 @@ class App extends Component {
             role={this.state.role}
             message={this.state.message}
           />
-          {this.state.showPopup && <Popup />}
+          {this.state.showPopup && (
+            <Popup
+              closePopup={this.closePopup}
+              firstname={this.state.firstname}
+              lastname={this.state.lastname}
+              phone={this.state.phone}
+              role={this.state.role}
+              message={this.state.message}
+            />
+          )}
         </div>
       </div>
     );

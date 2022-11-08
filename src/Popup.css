@@ -1,0 +1,51 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.602);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupWindow {
+  z-index: 1;
+  background-color: white;
+  width: 300px;
+  min-height: 100px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popupWindow h2 {
+  margin: 0;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.popupWindow p {
+  margin: 0.5rem 0;
+}
+
+.popupWindow .buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popupWindow .buttons button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.popupWindow .buttons button:nth-child(2) {
+  background-color: lightcoral;
+}

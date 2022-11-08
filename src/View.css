@@ -1,4 +1,9 @@
 .View {
   background-color: lightcoral;
   padding: 1.5rem 2rem;
+  min-width: 400px;
+}
+
+.View p {
+  margin: 1rem 0;
 }

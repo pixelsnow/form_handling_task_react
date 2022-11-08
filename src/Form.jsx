@@ -20,7 +20,9 @@ const Form = (props) => {
         <label htmlFor="message">Message</label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
       </form>
-      <button type="submit">Send</button>
+      <button type="submit" onClick={props.submitHandler}>
+        Send
+      </button>
     </div>
   );
 };

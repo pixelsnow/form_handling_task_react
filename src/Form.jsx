@@ -1,33 +1,26 @@
-const Form = () => {
+import "./Form.css";
+
+const Form = (props) => {
   return (
     <div className="form-container">
       <h2>Form</h2>
-      <form>
-        <div>
-          <label htmlFor="firstname">First name</label>
-          <input type="text" id="firstname" />
-        </div>
-        <div>
-          <label htmlFor="lastname">Last name</label>
-          <input type="text" id="lastname" />
-        </div>
-        <div>
-          <label htmlFor="phone">Phone number</label>
-          <input type="text" id="phone" />
-        </div>
-        <div>
-          <label htmlFor="role">Select role</label>
-          <select name="role" id="role">
-            <option value="teacher">Teacher</option>
-            <option value="student">Student</option>
-            <option value="staff">Staff</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
+      <form onChange={props.formHandler}>
+        <label htmlFor="firstname">First name</label>
+        <input type="text" id="firstname" name="firstname" />
+        <label htmlFor="lastname">Last name</label>
+        <input type="text" id="lastname" name="lastname" />
+        <label htmlFor="phone">Phone number</label>
+        <input type="text" id="phone" name="phone" />
+        <label htmlFor="role">Select role</label>
+        <select name="role" id="role">
+          <option value="teacher">Teacher</option>
+          <option value="student">Student</option>
+          <option value="staff">Staff</option>
+        </select>
+        <label htmlFor="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
       </form>
+      <button type="submit">Send</button>
     </div>
   );
 };

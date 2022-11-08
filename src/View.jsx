@@ -1,6 +1,8 @@
+import "./View.css";
+
 const View = (props) => {
   return (
-    <div>
+    <div className="View">
       <h2>This is your input</h2>
       <p>First name: {props.firstname}</p>
       <p>Last name: {props.lastname}</p>

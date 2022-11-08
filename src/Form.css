@@ -1,0 +1,25 @@
+.form-container {
+  background-color: lightgoldenrodyellow;
+  padding: 1.5rem 2rem;
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.3rem;
+}
+
+button[type="submit"] {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: black;
+  color: white;
+}
+
+.form-container form {
+  display: grid;
+}

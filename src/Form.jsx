@@ -13,6 +13,9 @@ const Form = (props) => {
         <input type="tel" id="phone" name="phone" />
         <label htmlFor="role">Select role</label>
         <select name="role" id="role">
+          <option selected disabled>
+            Select a role
+          </option>
           <option value="teacher">Teacher</option>
           <option value="student">Student</option>
           <option value="staff">Staff</option>

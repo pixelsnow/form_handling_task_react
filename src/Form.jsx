@@ -10,7 +10,7 @@ const Form = (props) => {
         <label htmlFor="lastname">Last name</label>
         <input type="text" id="lastname" name="lastname" />
         <label htmlFor="phone">Phone number</label>
-        <input type="text" id="phone" name="phone" />
+        <input type="tel" id="phone" name="phone" />
         <label htmlFor="role">Select role</label>
         <select name="role" id="role">
           <option value="teacher">Teacher</option>

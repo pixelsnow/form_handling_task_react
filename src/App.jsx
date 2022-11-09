@@ -6,16 +6,14 @@ import Popup from "./Popup";
 
 class App extends Component {
   state = {
-    firstname: "",
-    lastname: "",
-    phone: "",
-    role: "",
-    message: "",
+    note: { firstname: "", lastname: "", phone: "", role: "", message: "" },
     showPopup: false,
   };
 
   formHandler = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      note: { ...this.state.note, [e.target.name]: e.target.value },
+    });
   };
 
   submitForm = (e) => {
@@ -26,11 +24,9 @@ class App extends Component {
 
   closePopup = () => {
     this.setState({ showPopup: false });
-    this.setState({ firstname: "" });
-    this.setState({ lastname: "" });
-    this.setState({ phone: "" });
-    this.setState({ role: "" });
-    this.setState({ message: "" });
+    this.setState({
+      note: { firstname: "", lastname: "", phone: "", role: "", message: "" },
+    });
   };
 
   render() {
@@ -42,22 +38,9 @@ class App extends Component {
             formHandler={this.formHandler}
             submitHandler={this.submitForm}
           />
-          <View
-            firstname={this.state.firstname}
-            lastname={this.state.lastname}
-            phone={this.state.phone}
-            role={this.state.role}
-            message={this.state.message}
-          />
+          <View {...this.state.note} />
           {this.state.showPopup && (
-            <Popup
-              closePopup={this.closePopup}
-              firstname={this.state.firstname}
-              lastname={this.state.lastname}
-              phone={this.state.phone}
-              role={this.state.role}
-              message={this.state.message}
-            />
+            <Popup closePopup={this.closePopup} {...this.state.note} />
           )}
         </div>
       </div>

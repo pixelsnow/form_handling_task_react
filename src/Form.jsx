@@ -12,8 +12,8 @@ const Form = (props) => {
         <label htmlFor="phone">Phone number</label>
         <input type="tel" id="phone" name="phone" />
         <label htmlFor="role">Select role</label>
-        <select name="role" id="role">
-          <option selected disabled>
+        <select name="role" id="role" defaultValue="empty">
+          <option disabled value="empty">
             Select a role
           </option>
           <option value="teacher">Teacher</option>
@@ -21,7 +21,7 @@ const Form = (props) => {
           <option value="staff">Staff</option>
         </select>
         <label htmlFor="message">Message</label>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <textarea name="message" id="message"></textarea>
         <button type="submit">Send</button>
       </form>
     </div>

@@ -1,9 +1,13 @@
-.View {
+.view {
   background-color: lightcoral;
   padding: 1.5rem 2rem;
   min-width: 400px;
 }
 
-.View p {
+.view h2 {
+  margin: 0 0 1.5rem 0;
+}
+
+.view p {
   margin: 1rem 0;
 }

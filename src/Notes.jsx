@@ -5,6 +5,7 @@ import "./Notes.css";
 
 const Notes = () => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     axios.get("http://localhost:3001/notes").then((res) => setData(res.data));
   }, []);

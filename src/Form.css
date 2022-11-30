@@ -3,6 +3,10 @@
   padding: 1.5rem 2rem;
 }
 
+.form-container h2 {
+  margin: 0 0 1.5rem 0;
+}
+
 input,
 select,
 textarea {

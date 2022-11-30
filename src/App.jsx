@@ -39,11 +39,10 @@ const App = () => {
     });
   };
   return (
-    <div className="App">
+    <div className="app">
       <h1>hi</h1>
       <div className="form-view-container">
         <Form formHandler={formHandler} submitHandler={submitForm} />
-
         <View {...note} />
         <Notes />
         {showPopup && <Popup closePopup={closePopup} {...note} />}

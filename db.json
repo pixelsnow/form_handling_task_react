@@ -1,0 +1,36 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Matt",
+      "lastname": "River",
+      "phone": "34087560163",
+      "role": "teacher",
+      "message": "some really important message"
+    },
+    {
+      "id": 2,
+      "firstname": "Leila",
+      "lastname": "River",
+      "phone": "12387560163",
+      "role": "student",
+      "message": "some veeeery important message"
+    },
+    {
+      "id": 3,
+      "firstname": "Heikki",
+      "lastname": "Seppänen",
+      "phone": "0468756063",
+      "role": "teacher",
+      "message": "some super important message"
+    },
+    {
+      "id": 4,
+      "firstname": "Jasmin",
+      "lastname": "Piiroinen",
+      "phone": "0428756063",
+      "role": "student",
+      "message": "some extremely important message"
+    }
+  ]
+}

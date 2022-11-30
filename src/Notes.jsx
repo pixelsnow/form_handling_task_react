@@ -12,7 +12,7 @@ const Notes = () => {
 
   return (
     <div className="notes">
-      <h2>notessss</h2>
+      <h2>Notes</h2>
       <ul>
         {data.map((note) => {
           return (

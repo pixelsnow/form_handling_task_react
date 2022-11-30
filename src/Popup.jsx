@@ -1,6 +1,14 @@
 import "./Popup.css";
 
-const Popup = ({ firstname, lastname, phone, role, message, closePopup }) => {
+const Popup = ({
+  firstname,
+  lastname,
+  phone,
+  role,
+  message,
+  closePopup,
+  postHandler,
+}) => {
   return (
     <div className="popup">
       <div className="overlay">
@@ -12,8 +20,16 @@ const Popup = ({ firstname, lastname, phone, role, message, closePopup }) => {
           <p>Role: {role}</p>
           <p>Message: {message}</p>
           <div className="buttons">
-            <button onClick={closePopup}>Button 1</button>
-            <button onClick={closePopup}>Button 2</button>
+            <button onClick={closePopup}>Cancel</button>
+            <button
+              type="submit"
+              onClick={() => {
+                postHandler();
+                closePopup();
+              }}
+            >
+              OK
+            </button>
           </div>
         </div>
       </div>

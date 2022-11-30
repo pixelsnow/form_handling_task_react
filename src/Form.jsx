@@ -1,10 +1,22 @@
 import "./Form.css";
 
-const Form = (props) => {
+const Form = ({ formHandler, submitHandler }) => {
+  /* const submitForm = () => {
+    currId++;
+    axios.post("http://localhost:3001/notes", {
+      id: currId,
+      firstname: "Jane",
+      lastname: "River",
+      phone: "34087560163",
+      role: "teacher",
+      message: "some really important message",
+    });
+  }; */
+
   return (
     <div className="form-container">
-      <h2>Form</h2>
-      <form onChange={props.formHandler} onSubmit={props.submitHandler}>
+      <h2>Add your note</h2>
+      <form onChange={formHandler} onSubmit={submitHandler}>
         <label htmlFor="firstname">First name</label>
         <input type="text" id="firstname" name="firstname" />
         <label htmlFor="lastname">Last name</label>

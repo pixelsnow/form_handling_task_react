@@ -1,51 +1,55 @@
-import { Component } from "react";
-import "./App.css";
+import React from "react";
+import { useState } from "react";
+
 import Form from "./Form";
 import View from "./View";
 import Popup from "./Popup";
+import Notes from "./Notes";
 
-class App extends Component {
-  state = {
-    note: { firstname: "", lastname: "", phone: "", role: "", message: "" },
-    showPopup: false,
+import "./App.css";
+
+const App = () => {
+  const [note, setNote] = useState({
+    firstname: "",
+    lastname: "",
+    phone: "",
+    role: "",
+    message: "",
+  });
+  const [showPopup, setShowPopup] = useState(false);
+
+  const formHandler = (e) => {
+    setNote({ ...note, [e.target.name]: e.target.value });
   };
 
-  formHandler = (e) => {
-    this.setState({
-      note: { ...this.state.note, [e.target.name]: e.target.value },
-    });
-  };
-
-  submitForm = (e) => {
+  const submitForm = (e) => {
     e.preventDefault();
-    this.setState({ showPopup: true });
+    setShowPopup(true);
     e.target.reset();
   };
 
-  closePopup = () => {
-    this.setState({ showPopup: false });
-    this.setState({
-      note: { firstname: "", lastname: "", phone: "", role: "", message: "" },
+  const closePopup = () => {
+    setShowPopup(false);
+    setNote({
+      firstname: "",
+      lastname: "",
+      phone: "",
+      role: "",
+      message: "",
     });
   };
+  return (
+    <div className="App">
+      <h1>hi</h1>
+      <div className="form-view-container">
+        <Form formHandler={formHandler} submitHandler={submitForm} />
 
-  render() {
-    return (
-      <div className="App">
-        <h1>hi</h1>
-        <div className="form-view-container">
-          <Form
-            formHandler={this.formHandler}
-            submitHandler={this.submitForm}
-          />
-          <View {...this.state.note} />
-          {this.state.showPopup && (
-            <Popup closePopup={this.closePopup} {...this.state.note} />
-          )}
-        </div>
+        <View {...note} />
+        <Notes />
+        {showPopup && <Popup closePopup={closePopup} {...note} />}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
